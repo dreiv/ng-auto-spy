@@ -25,6 +25,7 @@ describe('AppComponent', () => {
     };
     const service = autoSpy(AuthorService);
     service.getAuthor.and.returnValue(mockAuthor);
+
     const c = new AppComponent(service);
     c.ngOnInit();
     expect(c.author).toEqual(mockAuthor);
